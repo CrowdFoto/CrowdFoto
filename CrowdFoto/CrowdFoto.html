@@ -1,5 +1,27 @@
 <head>
   <title>CrowdFoto</title>
+    <script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.js"></script>
+
+<!-- Instantiate the widget -->
+<script type="text/javascript">
+
+    var featherEditor = new Aviary.Feather({
+        apiKey: '485d12df-f741-403b-8413-aac1665c63ef',
+        onSave: function(imageID, newURL) {
+            var img = document.getElementById(imageID);
+            img.src = newURL;
+        }
+    });
+
+    function launchEditor(id, src) {
+        featherEditor.launch({
+            image: id,
+            url: src
+        });
+        return false;
+    }
+
+</script>    
 </head>
 
 <body>
@@ -11,4 +33,13 @@
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+                     
+
+<!-- Add an edit button, passing the HTML id of the image
+    and the public URL to the image -->
+<a href="#" onclick="return launchEditor('editableimage1', 
+    'http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg');">Edit!</a>
+
+<!-- original line of HTML here: -->
+<img id="editableimage1" src="http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg"/>
 </template>
