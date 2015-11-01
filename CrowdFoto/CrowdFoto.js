@@ -6,15 +6,12 @@ Tools = new Mongo.Collection("tools");
 if (Meteor.isClient) {
 
   Template.uploadPhoto.helpers({
-<<<<<<< HEAD
     goals: function () {
       return Goals.find({});
     }
   });
 
   Template.partitionPage.helpers({
-=======
->>>>>>> CrowdFoto/master
     goals: function () {
       return Goals.find({});
     },
