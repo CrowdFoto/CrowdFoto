@@ -8,7 +8,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.uploadPhoto.events({
+  Template.upload.events({
     "submit .new-task": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
