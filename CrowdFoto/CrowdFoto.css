@@ -20,6 +20,15 @@ padding: 10px 10px 10px 10px;
 	float: right;
 }
 
+#edit-instructions {
+	width: 25%;
+	padding-left: 10px;
+}
+
+#edit-instructions .list {
+	float: left;
+}
+
 .temp-box {
 	background-color: gray;
 	width: 600px;

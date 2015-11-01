@@ -23,6 +23,18 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.editPage.helpers({
+    goals: function () {
+      return Goals.find({});
+    },
+    tools: function () {
+      return Tools.find({});
+    },
+    levels: function () {
+      return Levels.find({});
+    }
+  });
+
   Template.uploadPhoto.events({
     "submit .new-task": function (event) {
       // Prevent default browser form submit
