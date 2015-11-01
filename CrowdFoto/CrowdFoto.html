@@ -3,6 +3,7 @@
     <script type="text/javascript" src="http://feather.aviary.com/imaging/v2/editor.js"></script>
 
 <!-- Instantiate the widget -->
+
 <script type="text/javascript">
 
     var featherEditor = new Aviary.Feather({
@@ -27,15 +28,15 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  {{> launchEditor}}
+
+  {{> photoUploader}}
+
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="launchEditor">
                      
-
-<!-- Add an edit button, passing the HTML id of the image
+ Add an edit button, passing the HTML id of the image
     and the public URL to the image -->
 <a href="#" onclick="return launchEditor('editableimage1', 
     'http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg');">Edit!</a>
@@ -43,3 +44,5 @@
 <!-- original line of HTML here: -->
 <img id="editableimage1" src="http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg"/>
 </template>
+
+

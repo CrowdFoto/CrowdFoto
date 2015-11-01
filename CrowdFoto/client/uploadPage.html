@@ -1,0 +1,24 @@
+<!-- Template for Photo Upload Page -->
+
+<template name="photoUploader">
+
+<!--<div class= "side-buffer" id="upload-left">fill</div>-->
+
+<div class= "router-container">
+  
+  <div class="object-inset" id="upload-photo"><div class="temp-box"><h2>Drag and drop a photo here...</h2></div></div>
+
+  <div class="object-inset" id="add-goals">    
+    <h1>Goals</h1>
+    <form class="new-task">
+      <input type="text" name="text" placeholder="Type to add a new goal" />
+    </form>
+    <ul>
+      {{#each goals}}
+        {{> editableGoals}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+
+</template>

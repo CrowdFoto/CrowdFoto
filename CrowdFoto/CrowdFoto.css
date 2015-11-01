@@ -1,1 +1,30 @@
 /* CSS declarations go here */
+
+.router-container {
+	height: 100%;
+	float: left;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.object-inset {
+float: left;
+padding: 10px 10px 10px 10px;
+}
+
+#upload-photo {
+	float: left;
+}
+
+#add-goals {
+	float: right;
+}
+
+.temp-box {
+	background-color: gray;
+	width: 600px;
+	height: 400px;
+	text-align: center;
+	vertical-align: center;
+	opacity: 60%;
+}
