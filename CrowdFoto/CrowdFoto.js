@@ -1,16 +1,14 @@
 Goals = new Mongo.Collection("goals");
 
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
 
-  Template.photoUploader.helpers({
+  Template.uploadPhoto.helpers({
     goals: function () {
       return Goals.find({});
     }
   });
 
-  Template.photoUploader.events({
+  Template.uploadPhoto.events({
     "submit .new-task": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
@@ -35,6 +33,7 @@ if (Meteor.isClient) {
     }
   });
 }
+
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
