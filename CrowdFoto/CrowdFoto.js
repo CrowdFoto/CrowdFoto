@@ -2,13 +2,13 @@ Goals = new Mongo.Collection("goals");
 
 if (Meteor.isClient) {
 
-  Template.photoUploader.helpers({
+  Template.uploadPhoto.helpers({
     goals: function () {
       return Goals.find({});
     }
   });
 
-  Template.photoUploader.events({
+  Template.uploadPhoto.events({
     "submit .new-task": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
