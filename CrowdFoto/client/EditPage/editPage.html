@@ -1,11 +1,41 @@
 <template name="editPage">
-                     
 
+
+
+	<div class="edit-page-container" id="edit-instructions">
+		<div class="list" id="goals-to-accomplish">
+			<h1>Goals to accomplish</h1>
+			<ul>
+				{{#each goals}}
+				{{> staticGoals}}
+				{{/each}}
+			</ul>
+		</div>		
+		<div class="list" id="tools-to-use">
+			<h1>Tools to use</h1>
+			<ul>
+				{{#each tools}}
+				{{> staticTool}}
+				{{/each}}
+			</ul>
+		</div>
+		<div class="list" id="levels-to-use">
+			<h1>Levels to adjust</h1>
+			<ul>
+				{{#each tools}}
+				{{> staticTool}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="edit-page-container" id="image-editor-box">
 <!-- Add an edit button, passing the HTML id of the image
-    and the public URL to the image -->
-<a href="#" onclick="return launchEditor('editableimage1', 
-    'http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg');">Edit!</a>
+	and the public URL to the image -->
+	<a href="#" onclick="return launchEditor('editableimage1', 
+	'http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg');">Edit!</a>
 
-<!-- original line of HTML here: -->
-<img id="editableimage1" src="http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg"/>
+	<!-- original line of HTML here: -->
+	<img id="editableimage1" src="http://markets.mccormick.northwestern.edu/images/people/Jason-D-Hartline.jpeg"/>
+
+	</div>
 </template>
