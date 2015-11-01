@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 
-.router-container {
+.page-container {
 	height: 100%;
 	float: left;
 	margin-left: 10%;
@@ -27,4 +27,9 @@ padding: 10px 10px 10px 10px;
 	text-align: center;
 	vertical-align: center;
 	opacity: 60%;
+}
+
+.list {
+	float: left;
+	margin: 10px;
 }

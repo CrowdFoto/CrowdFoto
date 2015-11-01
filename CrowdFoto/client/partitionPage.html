@@ -1,3 +1,39 @@
 <template name="partitionPage">
-	<div></div>
+	<div class="page-container">
+
+		<div class="object-inset" id="upload-photo"><div class="temp-box"><h2>Pull in image</h2></div></div>
+
+		<div class="object-inset" id="display-goals">    
+			<h1>Goals</h1>
+			<ul>
+				{{#each goals}}
+				{{> staticGoals}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="page-container"> 
+		<div class="list" id="levels-to-adjust">
+			<h1>Levels</h1>
+			<form class="new-level">
+				<input type="text" name="text" placeholder="Type to add a new suggested level to edit" />
+			</form>
+			<ul>
+				{{#each levels}}
+				{{> editableLevel}}
+				{{/each}}
+			</ul>
+		</div>
+		<div class="list" id="tools-to-use">
+			<h1>Tools</h1>
+			<form class="new-tool">
+				<input type="text" name="text" placeholder="Type to add a new suggested tool to use" />
+			</form>
+			<ul>
+				{{#each tools}}
+				{{> editableTool}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
 </template>
