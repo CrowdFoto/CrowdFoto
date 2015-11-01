@@ -9,3 +9,7 @@ Router.route('/editPage', function(){
 Router.route('/partitionPage', function(){
   this.render('partitionPage');
 });
+
+Router.route('/verifyPage', function(){
+  this.render('verifyPage');
+});
