@@ -4,4 +4,11 @@ Router.route('/', function(){
 
 Router.route('/editPage', function(){
   this.render('editPage');
+<<<<<<< HEAD
+});
+
+Router.route('/partitionPage', function(){
+  this.render('partitionPage');
+=======
+>>>>>>> CrowdFoto/master
 });
