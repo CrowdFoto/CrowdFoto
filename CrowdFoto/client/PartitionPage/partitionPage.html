@@ -1,5 +1,6 @@
 <template name="partitionPage">
 	<div class="page-container">
+	<div class="page-container-row">
 
 		<div class="object-inset" id="upload-photo"><div class="temp-box"><h2>Pull in image</h2></div></div>
 
@@ -10,16 +11,19 @@
 				{{> staticGoals}}
 				{{/each}}
 			</ul>
-
-			<a href="/editPage">Submit Partition</a>
+				<button class="submit-button">
+					<a href="/editPage">Submit Partition</a>
+				</button>
 		</div>
 	</div>
-	<div class="page-container"> 
+	<div class="page-container-row"> 
 		<div class="list" id="levels-to-adjust">
+			<div class="list-header">
 			<h1>Levels</h1>
 			<form class="new-level">
 				<input type="text" name="text" placeholder="Type to add a new suggested level to edit" />
 			</form>
+		</div>
 			<ul>
 				{{#each levels}}
 				{{> editableLevel}}
@@ -37,5 +41,6 @@
 				{{/each}}
 			</ul>
 		</div>
+	</div>
 	</div>
 </template>

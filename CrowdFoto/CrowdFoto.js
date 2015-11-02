@@ -1,6 +1,7 @@
 Goals = new Mongo.Collection("goals");
 Levels = new Mongo.Collection("levels");
 Tools = new Mongo.Collection("tools");
+Images = new Mongo.Collection("images"); // Guessing this will change
 
 
 if (Meteor.isClient) {
@@ -35,8 +36,14 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.verifyPage.helpers ({
+    imagesToVerify: function () {
+      return Images.find({});
+    } //function to load images - only important piece is that it is labeled imagesToVerify
+  })
+
   Template.uploadPhoto.events({
-    "submit .new-task": function (event) {
+    "submit .new-goal": function (event) {
       // Prevent default browser form submit
       event.preventDefault();
  

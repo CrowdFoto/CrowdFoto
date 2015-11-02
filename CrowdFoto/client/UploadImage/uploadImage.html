@@ -2,27 +2,32 @@
 
 <template name="uploadPhoto">
 
-<!--<div class= "side-buffer" id="upload-left">fill</div>-->
+  <!--<div class= "side-buffer" id="upload-left">fill</div>-->
 
-<div class= "page-container">
-  
-  <div class="object-inset" id="upload-photo"><div class="temp-box"><h2>Drag and drop a photo here...</h2></div></div>
+  <div class= "page-container">
 
-  <div class="object-inset" id="add-goals">    
-    <h1>Goals</h1>
-    <form class="new-task">
-      <input type="text" name="text" placeholder="Type to add a new goal" />
-    </form>
-    <ul>
-      {{#each goals}}
-        {{> editableGoals}}
-      {{/each}}
-    </ul>
-  </div>
-</div>
+    <div class="object-inset" id="upload-photo">
+      <h2>Drag and drop a photo here...</h2> 
+      <div class="temp-box"></div></div>
 
-<a href="/partitionPage">Submit image and goals</a>
+      <div class="object-inset" id="add-goals">    
+        <div class="list-header">
+          <h1>Goals</h1>
+          <form class="new-goal">
+            <input type="text" name="text" placeholder="Type to add a new goal" />
+          </form>
+        </div>
+        <ul>
+          {{#each goals}}
+          {{> editableGoals}}
+          {{/each}}
+        </ul>
+        <button class="submit-button">
+          <a href="/partitionPage">Submit image and goals</a>
+        </button>
+      </div>
 
+    </div>
 </template>
 
 
